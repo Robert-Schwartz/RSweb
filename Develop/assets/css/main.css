@@ -2672,6 +2672,18 @@ input, select, textarea {
 				width: 22em;
 			}
 
+/* project images */
+#project-images {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.project-images {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+
 /* Wrapper */
 
 	.wrapper {
@@ -3746,3 +3758,5 @@ input, select, textarea {
 			}
 
 	}
+
+	
