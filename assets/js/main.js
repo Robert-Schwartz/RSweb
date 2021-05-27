@@ -1,5 +1,5 @@
 /*
-	Gravity by Pixelarity
+	Prototype by Pixelarity
 	pixelarity.com | hello@pixelarity.com
 	License: pixelarity.com/license
 */
@@ -7,7 +7,9 @@
 (function($) {
 
 	var	$window = $(window),
-		$body = $('body');
+		$body = $('body'),
+		$header = $('#header'),
+		$banner = $('#banner');
 
 	// Breakpoints.
 		breakpoints({
@@ -25,127 +27,32 @@
 			}, 100);
 		});
 
-	// Touch mode.
-		if (browser.mobile)
-			$body.addClass('is-touch');
+	// Header.
+		if ($banner.length > 0
+		&&	$header.hasClass('alt')) {
 
-	// Dropdowns.
-		$('#nav > ul').dropotron({
-			alignment: ($body.hasClass('landing') ? 'center' : 'right'),
-			hideDelay: 400
-		});
+			$window.on('resize', function() { $window.trigger('scroll'); });
 
-	// Off-Canvas Navigation.
+			$banner.scrollex({
+				bottom:		$header.outerHeight(),
+				terminate:	function() { $header.removeClass('alt'); },
+				enter:		function() { $header.addClass('alt'); },
+				leave:		function() { $header.removeClass('alt'); $header.addClass('reveal'); }
+			});
 
-		// Title Bar.
-			$(
-				'<div id="titleBar">' +
-					'<a href="#navPanel" class="toggle"></a>' +
-					'<span class="title">' + $('#logo').html() + '</span>' +
-				'</div>'
-			)
-				.appendTo($body);
+		}
 
-		// Navigation Panel.
-			$(
-				'<div id="navPanel">' +
-					'<nav>' +
-						$('#nav').navList() +
-					'</nav>' +
-				'</div>'
-			)
-				.appendTo($body)
-				.panel({
-					delay: 500,
-					hideOnClick: true,
-					hideOnSwipe: true,
-					resetScroll: true,
-					resetForms: true,
-					side: 'left',
-					target: $body,
-					visibleClass: 'navPanel-visible'
-				});
-
-	// Carousel.
-		$('.carousel').each(function() {
-
-			var	$this = $(this);
-
-			if (!browser.mobile) {
-
-				$this.css('overflow-x', 'hidden');
-
-				// Wrapper.
-					$this.wrap('<div class="carousel-wrapper" />');
-					var $wrapper = $this.parent();
-
-				// Nav.
-					var	$navRight = $('<div class="nav right"></div>').insertAfter($this),
-						$navLeft = $('<div class="nav left"></div>').insertAfter($this),
-						intervalId;
-
-					$navLeft
-						.on('mouseenter', function() {
-							intervalId = window.setInterval(function() {
-								$this.scrollLeft( $this.scrollLeft() - 5 );
-							}, 10);
-						})
-						.on('mouseleave', function() {
-							window.clearInterval(intervalId);
-						});
-
-					$navRight
-						.on('mouseenter', function() {
-							intervalId = window.setInterval(function() {
-								$this.scrollLeft( $this.scrollLeft() + 5 );
-							}, 10);
-						})
-						.on('mouseleave', function() {
-							window.clearInterval(intervalId);
-						});
-
-				// Events.
-					$window
-						.on('resize load', function() {
-
-							if ($this.width() < $this.prop('scrollWidth'))
-								$wrapper.removeClass('no-scroll');
-							else
-								$wrapper.addClass('no-scroll');
-
-						});
-
-			}
-
-			// Poptrox.
-				$this.poptrox({
-					baseZIndex: 100001,
-					useBodyOverflow: false,
-					usePopupEasyClose: false,
-					overlayColor: '#000000',
-					overlayOpacity: 0.75,
-					usePopupDefaultStyling: false,
-					popupLoaderText: '',
-					usePopupNav: true,
-					usePopupCaption: true
-				});
-
-				breakpoints.on('<=small', function() {
-
-					$this[0]._poptrox.usePopupCaption = false;
-					$this[0]._poptrox.usePopupCloser = false;
-					$this[0]._poptrox.windowMargin = 10;
-
-				});
-
-				breakpoints.on('>small', function() {
-
-					$this[0]._poptrox.usePopupCaption = true;
-					$this[0]._poptrox.usePopupCloser = true;
-					$this[0]._poptrox.windowMargin = 50;
-
-				});
-
-		});
+	// Menu.
+		$('#menu')
+			.append('<a href="#menu" class="close"></a>')
+			.appendTo($body)
+			.panel({
+				delay: 500,
+				hideOnClick: true,
+				hideOnSwipe: true,
+				resetScroll: true,
+				resetForms: true,
+				side: 'right'
+			});
 
 })(jQuery);
