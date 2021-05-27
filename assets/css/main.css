@@ -3706,7 +3706,6 @@ input, select, textarea {
 		background-image: -webkit-linear-gradient(to top, rgba(48, 54, 57, 0.2), rgba(48, 54, 57, 0.2)), url("../../images/Valley.jpeg");
 		background-image: -ms-linear-gradient(to top, rgba(48, 54, 57, 0.2), rgba(48, 54, 57, 0.2)), url("../../images/Valley.jpeg");
 		background-image: linear-gradient(to top, rgba(48, 54, 57, 0.2), rgba(48, 54, 57, 0.2)), url("../../images/Valley.jpeg");
-		background-image: url("../../images/Valley.jpeg");
 		background-attachment: fixed;
 		background-position: center;
 		background-size: cover;
@@ -3913,7 +3912,7 @@ input, select, textarea {
 		@media screen and (max-width: 1280px) {
 
 			#footer {
-				background: #303639;
+				/* background: #303639; */
 			}
 
 				#footer > .inner {
