@@ -2885,7 +2885,7 @@ input, select, textarea {
 	#banner {
 		padding: 11em 0 8em 0 ;
 		background-attachment: scroll, fixed;
-		background-image: url("images/overlay.png"), url("../../images/banner.jpg");
+		background-image: url("images/overlay.png"), url("../../images/fulls/Valley.jpeg");
 		background-position: center center;
 		background-size: cover;
 		line-height: 2;
