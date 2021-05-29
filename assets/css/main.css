@@ -3699,13 +3699,9 @@ input, select, textarea {
 /* Footer */
 
 	#footer {
-		background-color: #303639;
+		background-color: #1f3f4f;
 		color: #ffffff;
 		padding: 7em 0 5em 0 ;
-		background-image: -moz-linear-gradient(to top, rgba(48, 54, 57, 0.2), rgba(48, 54, 57, 0.2)), url("../../images/Valley.jpeg");
-		background-image: -webkit-linear-gradient(to top, rgba(48, 54, 57, 0.2), rgba(48, 54, 57, 0.2)), url("../../images/Valley.jpeg");
-		background-image: -ms-linear-gradient(to top, rgba(48, 54, 57, 0.2), rgba(48, 54, 57, 0.2)), url("../../images/Valley.jpeg");
-		background-image: linear-gradient(to top, rgba(48, 54, 57, 0.2), rgba(48, 54, 57, 0.2)), url("../../images/Valley.jpeg");
 		background-attachment: fixed;
 		background-position: center;
 		background-size: cover;
