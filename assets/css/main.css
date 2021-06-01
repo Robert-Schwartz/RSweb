@@ -1,8 +1,6 @@
 @import url(fontawesome-all.min.css);
 
 /*
-	Prototype by Pixelarity
-	pixelarity.com | hello@pixelarity.com
 	License: pixelarity.com/license
 */
 
@@ -72,6 +70,25 @@ input, select, textarea {
 }
 
 /* Basic */
+
+#projects {
+	background-color:rgba(144, 144, 144, 0.075)
+}
+
+#contact {
+	background-color: #1f3f4f;
+	color: white;
+}
+#contact h2 {
+	background-color: #1f3f4f;
+	color: white;
+}
+#contact .button {
+	color: white;
+}
+
+
+
 
 	@-ms-viewport {
 		width: device-width;
