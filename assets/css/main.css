@@ -76,15 +76,18 @@ input, select, textarea {
 }
 
 #contact {
-	background-color: #1f3f4f;
+	background-color: rgba(31, 63, 79,98%);
 	color: white;
 }
 #contact h2 {
-	background-color: #1f3f4f;
 	color: white;
 }
 #contact .button {
 	color: white;
+}
+
+#gravity {
+	font-size: xx-large;
 }
 
 
@@ -3717,7 +3720,8 @@ input, select, textarea {
 /* Footer */
 
 	#footer {
-		background-color: #1f3f4f;
+		background-color: rgba(31, 63, 79,98%);
+		/* other color used  #1f3f4f */
 		color: #ffffff;
 		padding: 7em 0 5em 0 ;
 		background-attachment: fixed;
