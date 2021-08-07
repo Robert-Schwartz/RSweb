@@ -1,6 +1,6 @@
 # Robert Schwartz Portfolio Page
 
-GitHub Repo: [https://github.com/Robert-Schwartz/Robert-Schwartz]<br>
+GitHub Repo: [https://github.com/Robert-Schwartz/RSweb.dev]<br>
 
 Deployed at: [https://rsweb.dev/) <br>
 
@@ -26,7 +26,7 @@ This project was built using HTML, CSS, Javascript, as well as Sass.
 
 - Clone the repo:
 
-  use: `git clone https://github.com/Robert-Schwartz/Robert-Schwartz.git` in the command line
+  use: `git clone https://github.com/Robert-Schwartz/RSweb.dev.git` in the command line
 
 
 ## Usage
